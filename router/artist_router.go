@@ -6,8 +6,5 @@ import (
 )
 
 func InitArtistRouter(router *gin.Engine) {
-	artistRouter := router.Group("/artist")
-	{
-		artistRouter.GET("/:name", controller.FindArtistByName)
-	}
+	router.GET("/artist", controller.FindArtistByName)
 }
